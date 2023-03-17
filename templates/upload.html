@@ -1,0 +1,44 @@
+<style>
+div {
+  background-color: lightblue;
+  text-align: center;
+  font-size: 30px;
+}
+
+p {
+  background-color: yellow;
+}
+.button{
+    font-size: 30px;
+    background-color: palegoldenrod;
+}
+</style>
+
+<html>
+   <body>
+   <h1>Upload file to encrypt the message</h1>
+    <form action = "/uploader" method = "post" enctype="multipart/form-data">
+        <label>Choose a file to upload:</label>
+        <input type="file" name="file" />
+
+        <label>Hide Message:</label>
+        <input type = "text" id="hide-message" name="hide_message">
+
+        <label for="startbit">Starting bit number:</label>
+		<input type="number" name="startbit" id="startbit"><br><br>
+
+        <label for="length">Length of replacement (in bits):</label>
+		<input type="number" name="length" id="length"><br><br>
+
+        <label for="mode">Mode of operation:</label>
+		<select name="mode" id="mode">
+			<option value="fixed">Fixed length</option>
+			<option value="variable">Variable length</option>
+            <option value="variable">changing</option>
+
+		</select><br><br>
+
+        <input type = "submit" value="Upload">
+    </form>
+   </body>
+</html>

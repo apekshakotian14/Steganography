@@ -1,0 +1,42 @@
+<style>
+div {
+  background-color: lightblue;
+  text-align: center;
+  font-size: 30px;
+}
+
+p {
+  background-color: yellow;
+}
+.button{
+    font-size: 30px;
+    background-color: palegoldenrod;
+}
+</style>
+<form>
+<div>
+    <h1>Welcome!!!</h1>
+    <label for="username">UserName</label>
+    <input type="text" id="username">
+    <label for="password">Password</label>
+    <input type="text" id="password">
+    <!--<a href="{{ url_for('submit') }}">Submit</a>-->
+    <a href="{{ url_for('submit') }}"><input type="button" style="background-color:palegoldenrod;width:150px;font-size:20px;" value="Submit"  onclick="javascript:validate()" /></a>
+</div>
+</form>
+
+<script type="text/javascript">
+function validate()
+{
+    if(   document.getElementById("username").value == "AzureUser"
+       && document.getElementById("password").value == "User123" )
+    {
+        alert( "validation succeeded" );
+    }
+    else
+    {
+        alert( "validation failed" );
+        location.href="fail.html";
+    }
+}
+</script>
