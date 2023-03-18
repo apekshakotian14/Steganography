@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'SteganographyTechnique'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_AF9371561ED1405A80FF4AA52C1CB57D }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_6B1312648C394379B2759C39121E2F35 }}
